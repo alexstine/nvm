@@ -582,6 +582,7 @@ cdnvm() {
         # If there is no default version, set it to `node`
         # This will use the latest version on your machine
         if [[ $default_version == "N/A" ]]; then
+            nvm install node;
             nvm alias default node;
             default_version=$(nvm version default);
         fi
